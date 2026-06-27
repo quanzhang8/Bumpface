@@ -65,7 +65,7 @@ button:hover {
     height: 85%;
     object-fit: cover;
     transition: transform 0.2s ease-in-out;
-    border-radius: 50%;
+    border-radius: 80%;
     transform: scale(0);
     cursor: pointer;
 }
