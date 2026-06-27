@@ -61,11 +61,11 @@ button:hover {
 }
 
 .hole img {
-    width: 85%;
-    height: 85%;
+    width: 95%;
+    height: 95%;
     object-fit: cover;
     transition: transform 0.2s ease-in-out;
-    border-radius: 80%;
+    border-radius: 90%;
     transform: scale(0);
     cursor: pointer;
 }
