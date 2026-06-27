@@ -119,6 +119,6 @@ function getMessage() {
         return "You Are So Lucky!";
     } else if {score < 15 {
         return "I Am Luckier!";
-    } else {return "I Love You Always and Forever!"}
+    } else {return "I Love You Always and Forever!"};
     }
 }
