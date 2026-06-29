@@ -133,3 +133,8 @@ function getMessage() {
         return "I Love You Always and Forever!";
     }
 }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+        .then(() => console.log("Service Worker Registered"));
+}
+
