@@ -117,7 +117,7 @@ function getMessage() {
         return "Happy Birthday My Honey!";
     } else if (score < 10) {
         return "You Are So Lucky!";
-    } else if {score < 15 {
+    } else if (score < 15 ) {
         return "I Am Luckier!";
     } else {return "I Love You Always and Forever!"};
     }
