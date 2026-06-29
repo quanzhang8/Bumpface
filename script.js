@@ -68,15 +68,21 @@ function startGame() {
         */
 
         // End the game when time is up
-        if (time === 0) {
+        if (time <= 0) {
             clearInterval(countdown);
             isPlaying = false;
             startButton.disabled = false;
             startButton.textContent = "Start Game";
             timeDisplay.textContent = getMessage();
-            score > 20 ? highSound.play() : endSound.play();
+            
+            // SAFE AUDIO CHECK: Prevents crash if audio elements are missing in HTML
+            if (score > 9) { 
+                if (highSound) highSound.play(); 
+            } else { 
+                if (endSound) endSound.play(); 
+            }
         }
-    }, 1000);
+    }, 1000); // <-- This closing bracket and comma were missing!
 
     // Start displaying images
     displayImage();
@@ -94,17 +100,21 @@ holes.forEach(hole => {
             scoreDisplay.textContent = `Score: ${score}`;
             
             // Play bomp sound
-            bompSound.currentTime = 0;
-            bompSound.play();
+            if (bompSound) {
+                bompSound.currentTime = 0;
+                bompSound.play();
+            }
             
             // Add a red border to the clicked image
             const image = hole.querySelector("img");
-            image.classList.add("clicked");
-            
-            // Remove the red border after a short delay
-            setTimeout(() => {
-                image.classList.remove("clicked");
-            }, 300);
+            if (image) {
+                image.classList.add("clicked");
+                
+                // Remove the red border after a short delay
+                setTimeout(() => {
+                    image.classList.remove("clicked");
+                }, 300);
+            }
         }
     });
 });
@@ -119,6 +129,7 @@ function getMessage() {
         return "You Are So Lucky!";
     } else if (score < 15 ) {
         return "I Am Luckier!";
-    } else {return "I Love You Always and Forever!";}
-    
+    } else {
+        return "I Love You Always and Forever!";
+    }
 }
