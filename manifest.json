@@ -1,0 +1,21 @@
+{
+  "short_name": "CakeGame",
+  "name": "Birthday Cake Whack Game",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#ff6b81",
+  "theme_color": "#ff4757",
+  "display": "standalone",
+  "orientation": "portrait"
+}
