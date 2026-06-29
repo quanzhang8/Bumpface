@@ -122,15 +122,15 @@ holes.forEach(hole => {
 // Function to get a fun message based on the score
 function getMessage() {
     if (score === 0) {
-        return "You blinked, Try Again!";
+        return "Are you sleeping 😴?  Try again...";
     } else if (score < 5) {
-        return "Happy Birthday My Honey!";
+        return "Happy Birthday Honey🥳 and keep trying...";
     } else if (score < 10) {
-        return "You Are So Lucky!";
+        return "You Are So Lucky ☀️ and keep trying...";
     } else if (score < 15 ) {
-        return "I Am Luckier!";
+        return "I Am Luckier 🌈 and keep trying...";
     } else {
-        return "I Love You Always and Forever!";
+        return "I Love You Always and Forever ❤️!";
     }
 }
 if ('serviceWorker' in navigator) {
